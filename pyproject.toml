@@ -1,0 +1,23 @@
+[project]
+name = "machinic-go-mini"
+version = "0.1.0"
+description = "Machinic Go Mini - AlphaZero/KataGo style self-play training for Go"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0.0",
+    "numpy>=1.24.0",
+    "rich>=13.0.0",
+    "textual>=0.40.0",
+    "click>=8.0.0",
+]
+
+[project.scripts]
+machinic-go = "machinic_go_mini.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
